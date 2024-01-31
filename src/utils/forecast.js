@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
       callback('Unable to find location, try another search.')
     } else {
       callback(undefined, 
-        'It is currently ' + body.timelines.minutely[0].values.temperature + ' degrees out.  There is a ' + body.timelines.minutely[0].values.precipitationProbability + '% chance of rain.'
+        'It is currently ' + body.timelines.minutely[0].values.temperature + ' degrees out.  There is a ' + body.timelines.minutely[0].values.precipitationProbability + '% chance of rain. The humidity is currently: ' + body.timelines.minutely[0].values.humidity + '%.'
       )
     }
   })
